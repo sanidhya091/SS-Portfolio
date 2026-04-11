@@ -4,8 +4,8 @@ import { Points, PointMaterial } from '@react-three/drei'
 import * as random from 'maath/random'
 
 const StarField = () => {
-  const ref = useRef<any>()
-  const sphere = random.inSphere(new Float32Array(2000), { radius: 1.5 })
+  const ref = useRef<any>(null)
+  const sphere = random.inSphere(new Float32Array(2000), { radius: 1.5 }) as Float32Array
   const mouse = useRef({ x: 0, y: 0 })
   const autoRotation = useRef({ x: 0, y: 0 })
 
