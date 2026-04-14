@@ -80,7 +80,7 @@ function App() {
       GitHub
     </button>
     <button
-      onClick={() => window.open('https://www.linkedin.com/in/sanidhya-singh', '_blank')}
+      onClick={() => window.open('https://www.linkedin.com/in/sanidhya-singh-2aa6b7273', '_blank')}
       className="px-6 py-3 rounded-full border border-purple-500 hover:bg-purple-500/20 transition-all duration-300 font-semibold text-purple-300 cursor-pointer"
     >
       LinkedIn
