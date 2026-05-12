@@ -8,6 +8,7 @@ import { useScroll, useTransform, motion } from 'framer-motion'
 import { useRef } from 'react'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
+import CurrentlyBuilding from './components/CurrentlyBuilding'
 
 function App() {
   const heroRef = useRef(null)
@@ -89,6 +90,7 @@ function App() {
 </motion.section>
       <About />
       <Projects />
+      <CurrentlyBuilding />
       <Skills />
       <Contact />
     </div>
