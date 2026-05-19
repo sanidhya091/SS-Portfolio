@@ -50,8 +50,8 @@ const Contact = () => {
           </motion.button>
 
           <motion.a
-            href="/Sanidhya_Singh_Resume.pdf"
-            download="Sanidhya_Singh_Resume.pdf"
+            href="/resume.pdf"
+            download="resume.pdf"
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 text-white font-semibold w-full md:w-auto justify-center"
           >
