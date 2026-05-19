@@ -72,7 +72,7 @@ function App() {
     initial={{ opacity: 0, y: 30 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: 1.0 }}
-    className="flex gap-4"
+    className="flex gap-4 flex-wrap justify-center"
   >
     <button
       onClick={() => window.open('https://github.com/sanidhya091', '_blank')}
@@ -85,6 +85,17 @@ function App() {
       className="px-6 py-3 rounded-full border border-purple-500 hover:bg-purple-500/20 transition-all duration-300 font-semibold text-purple-300 cursor-pointer"
     >
       LinkedIn
+    </button>
+    <button
+      onClick={() => {
+        const link = document.createElement('a')
+        link.href = '/resume.pdf'
+        link.download = 'resume.pdf'
+        link.click()
+      }}
+      className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 font-semibold text-white cursor-pointer"
+    >
+      Resume
     </button>
   </motion.div>
 </motion.section>
