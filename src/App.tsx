@@ -98,6 +98,21 @@ function App() {
       Resume
     </button>
   </motion.div>
+  <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.6, delay: 1.3 }}
+  className="mt-16 flex flex-col items-center gap-2"
+>
+  <span className="text-gray-600 text-xs tracking-widest uppercase">scroll</span>
+  <motion.div
+    animate={{ y: [0, 8, 0] }}
+    transition={{ duration: 1.5, repeat: Infinity }}
+    className="w-5 h-8 rounded-full border-2 border-purple-500/30 flex items-start justify-center pt-1.5"
+  >
+    <div className="w-1 h-2 rounded-full bg-purple-400" />
+  </motion.div>
+</motion.div>
 </motion.section>
       <About />
       <Projects />

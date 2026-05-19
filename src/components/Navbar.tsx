@@ -1,5 +1,14 @@
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useState } from 'react'
+import { User, Briefcase, Zap, Mail } from 'lucide-react'
+
+
+const navItems = [
+  { label: 'About', icon: User },
+  { label: 'Projects', icon: Briefcase },
+  { label: 'Skills', icon: Zap },
+  { label: 'Contact', icon: Mail },
+]
 
 const Navbar = () => {
   const [hidden, setHidden] = useState(false)
@@ -32,16 +41,18 @@ const Navbar = () => {
         SS
       </button>
 
-      <div className="flex gap-8">
-        {['About', 'Projects', 'Skills', 'Contact'].map((item) => (
+      <div className="flex items-center gap-6">
+        {navItems.map(({ label, icon: Icon }) => (
           <button
-            key={item}
-            onClick={() => scrollTo(item.toLowerCase())}
-            className="text-gray-400 hover:text-purple-400 transition-all duration-300 text-sm font-semibold"
+            key={label}
+            onClick={() => scrollTo(label.toLowerCase())}
+            className="flex items-center gap-1.5 text-gray-400 hover:text-purple-400 transition-all duration-300 text-sm font-semibold group"
           >
-            {item}
+            <Icon className="w-3.5 h-3.5 group-hover:text-purple-400 transition-colors duration-300" />
+            {label}
           </button>
         ))}
+
       </div>
     </motion.nav>
   )

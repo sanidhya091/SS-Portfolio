@@ -19,13 +19,13 @@ const About = () => {
           Who am I?
         </h2>
         <p className="text-gray-300 text-lg leading-relaxed mb-6">
-          I'm a 6th semester CS student who discovered that the most powerful thing 
-          you can do with AI isn't just use it — it's <span className="text-purple-400 font-semibold">build with it</span>.
+          I'm a CS student who loves building full stack applications that solve real problems — 
+from robust backends and clean APIs to <span className="text-purple-400 font-semibold">AI-powered features</span> that make products smarter.
         </p>
         <p className="text-gray-300 text-lg leading-relaxed mb-10">
-          I specialize in building <span className="text-cyan-400 font-semibold">AI-powered business tools</span> — 
-          full stack applications that solve real problems for real people. 
-          From idea to deployed product, I handle it all.
+          I specialize in <span className="text-cyan-400 font-semibold">full stack development</span> — 
+architecting scalable backends, designing intuitive frontends, and integrating AI where it actually adds value. 
+From idea to deployed product, I own the whole stack.
         </p>
 
         {/* Skills grid */}
