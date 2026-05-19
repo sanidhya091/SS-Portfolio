@@ -4,6 +4,30 @@ import codesense from '../assets/codesense.png'
 import invoiceai from '../assets/invoiceai.png'
 import lostandfound from '../assets/lostandfound.png'
 
+const techIconMap: Record<string, string> = {
+  "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "Next.js 14": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "FastAPI": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+  "Java": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  "Svelte": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
+  "Supabase": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
+  "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  "Tailwind": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+  "HTML5": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  "CSS3": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  "Groq API": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "FAISS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "Clerk v7": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "LLaMA 3.3 70B": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "Servlets": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  "JDBC": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+}
+
+
 const projects = [
   {
     title: "Anveshak",
@@ -112,18 +136,20 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
 
                 {/* show first 2 tech tags on card as hint */}
-                <div className="flex gap-2 mt-3 flex-wrap">
-                  {project.tech.slice(0, 2).map(t => (
-                    <span key={t} className="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-500 text-xs">
-                      {t}
-                    </span>
-                  ))}
-                  {project.tech.length > 2 && (
-                    <span className="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-gray-600 text-xs">
-                      +{project.tech.length - 2}
-                    </span>
-                  )}
-                </div>
+                <div className="flex gap-3 mt-3 flex-wrap items-center">
+  {project.tech.slice(0, 4).map(t => (
+    <img
+      key={t}
+      src={techIconMap[t]}
+      alt={t}
+      title={t}
+      className={`w-6 h-6 ${t === 'GitHub' || t === 'Next.js 14' ? 'invert' : ''}`}
+    />
+  ))}
+  {project.tech.length > 4 && (
+    <span className="text-gray-600 text-xs">+{project.tech.length - 4}</span>
+  )}
+</div>
 
                 <p className="text-gray-600 text-xs mt-auto pt-4">Hover to preview →</p>
               </motion.div>
